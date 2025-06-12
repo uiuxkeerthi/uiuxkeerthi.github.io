@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Header from './Header'
 
 interface Props {
   children: ReactNode
@@ -6,6 +7,9 @@ interface Props {
 
 export default function SectionContainer({ children }: Props) {
   return (
-    <section className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">{children}</section>
+    <>
+      <Header />
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:max-w-5xl lg:px-0 xl:max-w-6xl xl:px-0">{children}</section>
+    </>
   )
 }
