@@ -1,11 +1,11 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import Logo from '@/data/logo1.svg'
 import Link from './Link'
 import MobileNav from './MobileNav'
 
 const Header = () => {
-  let headerClass = 'h-32'
+  let headerClass = 'h-32 content-center'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -21,7 +21,7 @@ const Header = () => {
         <div className="flex items-center justify-between w-full">
           <Link href="/" aria-label={siteMetadata.headerTitle} className="flex-shrink-0">
             <div className="mr-3">
-              <Logo />
+              <img src={`${process.env.BASE_PATH || ''}/static/images/logo.gif`} alt="Example GIF" className='w-10' />
             </div>
           </Link>
           <div className="flex items-center space-x-4 leading-5">

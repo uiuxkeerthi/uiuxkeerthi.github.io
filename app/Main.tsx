@@ -40,6 +40,45 @@ const designApproaches = [
   },
 ]
 
+const stacks = [
+  {
+    icon: <Miro />,
+    title: 'Miro',
+    description: 'Brainstorming & Wireframing',
+    backgroundColor: '#FAD4C0',
+  },
+  {
+    icon: <Figma />,
+    title: 'Figma',
+    description: 'Designing Tool',
+    backgroundColor: '#B7E4C7',
+  },
+  {
+    icon: <Notion />,
+    title: 'Notion',
+    description: 'Project management & Documentation',
+    backgroundColor: '#D6CDE8',
+  },
+  {
+    icon: < Framer />,
+    title: 'Framer',
+    description: 'Website Designing',
+    backgroundColor: '#AEE8FF',
+  },
+  {
+    icon: < Canva />,
+    title: 'Canva',
+    description: 'Designing Tool',
+    backgroundColor: '#FFF3B0',
+  },
+  {
+    icon: < ChatGPT />,
+    title: 'ChatGPT',
+    description: 'Ideation and Content Generation',
+    backgroundColor: '#FFCDD2',
+  },
+]
+
 export default function Home({ posts }) {
   return (
     <>
@@ -68,8 +107,9 @@ export default function Home({ posts }) {
           </div>
 
           <div className="mt-16">
-            <button className="border border-orange-400 rounded-lg shadow-sm relative px-6 py-3 font-medium text-lg overflow-hidden group">
-              <span className="absolute inset-0 bg-gradient-to-br from-white to-orange-500 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-out"></span>
+            <button className="shadow-sm relative px-6 py-3 font-medium text-lg overflow-hidden group"
+              style={{ backgroundColor: '#FFE1D7' }}>
+              {/* <span className="absolute inset-0 bg-gradient-to-br from-white to-orange-500 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-out"></span> */}
               <span className="relative z-10 text-2xl">View Portfolio</span>
             </button>
           </div>
@@ -105,61 +145,44 @@ export default function Home({ posts }) {
         </div>
       </div>
 
+      <div className="-mt-12 mb-12 md:mb-24 md:mt-0">
+        <div className="content-wrapper">
+          <div className="flex items-center justify-center py-8">
+            <blockquote className="flex gap-2 pt-2 text-3xl text-slate-500 md:text-4xl lg:pt-0 lg:text-5xl dark:text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" role="img" fill="currentColor" className="-mt-1 h-10 text-slate-300 md:-mt-3 md:h-16 lg:h-24 dark:text-slate-800">
+                <path d="M7.27273 16.3833H0L5.30713 4H10.0737L7.27273 16.3833ZM17.199 16.3833H9.92629L15.2334 4H20L17.199 16.3833Z"></path>
+              </svg>
+              <span className="flex flex-col">
+                <span className="leading-[1.15]"><em>Design is</em> </span>
+                <span className="flex items-center gap-2 leading-[1.15] lg:gap-4">
+                  <span className="mt-1 h-0.5 w-8 rounded-full bg-slate-400 lg:h-1 lg:w-24 dark:bg-slate-600"></span>
+                  <span><strong className="font-extrabold text-slate-600 dark:text-slate-300">inside</strong> and <strong className="font-extrabold text-slate-600 dark:text-slate-300">out </strong></span>
+                  <span className="mt-1 h-0.5 w-6 rounded-full bg-slate-400 lg:h-1 lg:w-14 dark:bg-slate-600"></span></span>
+                <span className="leading-[1.15]">is a <strong className="relative font-extrabold text-slate-600 dark:text-slate-300">
+                  <span className="absolute -left-0.5 bottom-0 right-0 top-1 z-[-1] rounded-md bg-slate-100 px-1 lg:-left-1.5 lg:-right-0.5 lg:bottom-0 lg:top-2 dark:bg-slate-800"></span>must.</strong></span></span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
       <div>
         <div className='mt-40 col-span-12 relative'>
           <Typography>My Stack</Typography>
           {/* <div className="absolute bottom-2 left-0 w-full h-1 bg-orange-500"></div> */}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 mt-16">
-
-          <div className='bg-gray-100 shadow rounded-xl p-4 grid grid-cols-12'>
-            <div className='col-span-3'><Miro /></div>
-            <div className='col-span-9'>
-              <div className='text-xl font-bold'>Miro</div>
-              <div className='mt-1 text-sm'>Brainstorming & Wireframing</div>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 shadow rounded-xl p-4 grid grid-cols-12'>
-            <div className='col-span-3'><Figma /></div>
-            <div className='col-span-9'>
-              <div className='text-xl font-bold'>Figma</div>
-              <div className='mt-1 text-sm'>Designing Tool</div>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 shadow rounded-xl p-4 grid grid-cols-12'>
-            <div className='col-span-3'><Notion /></div>
-            <div className='col-span-9'>
-              <div className='text-xl font-bold'>Notion</div>
-              <div className='mt-1 text-sm'>Project management & Documentation</div>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 shadow rounded-xl p-4 grid grid-cols-12'>
-            <div className='col-span-3'><Framer /></div>
-            <div className='col-span-9'>
-              <div className='text-xl font-bold'>Framer</div>
-              <div className='mt-1 text-sm'>Website Designing</div>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 shadow rounded-xl p-4 grid grid-cols-12'>
-            <div className='col-span-3'><Canva /></div>
-            <div className='col-span-9'>
-              <div className='text-xl font-bold'>Canva</div>
-              <div className='mt-1 text-sm'>Designing Tool</div>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 shadow rounded-xl p-4 grid grid-cols-12'>
-            <div className='col-span-3'><ChatGPT /></div>
-            <div className='col-span-9'>
-              <div className='text-xl font-bold'>ChatGPT</div>
-              <div className='mt-1 text-sm'>Ideation and Content Generation</div>
-            </div>
-          </div>
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 mt-16">
+          {stacks && stacks.map((stack, idx) => {
+            return (
+              <div key={idx} className='bg-gray-100 shadow rounded-md p-4 flex' style={{ color: '#475569', backgroundColor: `${stack.backgroundColor}` }}>
+                <div className='mr-4 md:mr-2 content-center'>{stack.icon}</div>
+                <div>
+                  <div className='text-xl font-bold' style={{ color: '#475569' }}>{stack.title}</div>
+                  <div className='mt-1 text-sm' style={{ color: '#546479' }}>{stack.description}</div>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
 
