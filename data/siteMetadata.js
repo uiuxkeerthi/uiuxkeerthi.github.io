@@ -1,30 +1,21 @@
 /** @type {import("pliny/config").PlinyConfig } */
+
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  title: 'Pixels & Personas | A Designer’s Perspective',
+  author: 'Keerthi Gollapalli',
+  headerTitle: 'Creating Wireframes to Wonders',
+  description: 'Crafting intuitive and impactful digital experiences that connect users with solutions seamlessly.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
-  mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  x: 'https://twitter.com/x',
-  // twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com',
-  medium: 'https://medium.com',
-  bluesky: 'https://bsky.app/',
+  email: 'uiux.keerthi@gmail.com',
+  github: 'https://github.com/uiuxkeerthi',
+  instagram: 'https://www.instagram.com/uiux.keerthi',
   locale: 'en-US',
-  // set to true if you want a navbar fixed to the top
-  stickyNav: true,
+  stickyNav: true, // set to true if you want a navbar fixed to the top
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.

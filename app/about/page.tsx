@@ -29,7 +29,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mt-20">
+      <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 mt-20">
         <div>
           <div className='text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold'>When I’m Not Designing...</div>
           <div className='mt-10'>You’ll likely find me:</div>
@@ -57,8 +57,8 @@ export default function Page() {
       </div>
 
       <section>
-        <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-          <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12">
+        <div className="container flex flex-col items-start lg:flex-row my-12 lg:my-24">
+          <div className="flex flex-col w-full xl:sticky md:top-36 lg:w-1/3 mt-2 md:mt-12">
             <p className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold">Work Experience</p>
           </div>
           <div className="ml-0 md:ml-12 lg:w-2/3 sticky self-center">
@@ -123,8 +123,8 @@ export default function Page() {
       </section>
 
       <section>
-        <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-          <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12">
+        <div className="container flex flex-col items-start lg:flex-row my-12 lg:my-24">
+          <div className="flex flex-col w-full xl:sticky md:top-36 lg:w-1/3 mt-2 md:mt-12">
             <p className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold">Education</p>
           </div>
           <div className="ml-0 md:ml-12 lg:w-2/3 sticky self-center">

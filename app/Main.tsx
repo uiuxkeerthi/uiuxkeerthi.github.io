@@ -4,6 +4,7 @@ import Figma from '@/data/figma.svg'
 import Framer from '@/data/framer.svg';
 import Miro from '@/data/miro.svg';
 import Notion from '@/data/notion.svg';
+import DesignIdea from '@/data/idea.svg'
 import Image from '@/components/Image'
 import Typography from '@/components/Typography'
 
@@ -79,6 +80,25 @@ const stacks = [
   },
 ]
 
+const projectImages = [
+  {
+    title: 'Dashflow',
+    url: 'dashflow.png',
+  },
+  {
+    title: 'Dwanify',
+    url: 'dwanify.png',
+  },
+  {
+    title: 'Savory',
+    url: 'savory.png',
+  },
+  {
+    title: 'HyFlyer',
+    url: 'hyflyer.png',
+  },
+]
+
 export default function Home({ posts }) {
   return (
     <>
@@ -127,9 +147,11 @@ export default function Home({ posts }) {
       </div>
 
       <div>
-        <div className='mt-40 col-span-12 relative'>
+        <div className="mt-40 col-span-12 flex items-center">
           <Typography>My Approach to Design</Typography>
-          {/* <div className="absolute bottom-2 left-0 w-full h-1 bg-orange-500"></div> */}
+          <div className="flex-grow h-1 bg-orange-500 ml-4 relative">
+            <div className="absolute h-1 bg-gray-500 w-3/4"></div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 mt-16">
@@ -145,30 +167,48 @@ export default function Home({ posts }) {
         </div>
       </div>
 
-      <div className="-mt-12 mb-12 md:mb-24 md:mt-0">
+      <div className="mt-20 relative">
         <div className="content-wrapper">
-          <div className="flex items-center justify-center py-8">
-            <blockquote className="flex gap-2 pt-2 text-3xl text-slate-500 md:text-4xl lg:pt-0 lg:text-5xl dark:text-slate-400">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" role="img" fill="currentColor" className="-mt-1 h-10 text-slate-300 md:-mt-3 md:h-16 lg:h-24 dark:text-slate-800">
+          <div className="flex items-center justify-center py-8 relative">
+            {/* Left line */}
+            <div className="absolute top-1/2 -translate-y-1/2 left-0 w-1/4 h-1 bg-orange-500"></div>
+
+            <blockquote className="relative flex gap-2 text-center text-3xl md:text-4xl lg:text-5xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                role="img"
+                fill="currentColor"
+                className="-mt-1 h-10 text-slate-300 md:-mt-3 md:h-16 lg:h-24 dark:text-slate-800"
+              >
                 <path d="M7.27273 16.3833H0L5.30713 4H10.0737L7.27273 16.3833ZM17.199 16.3833H9.92629L15.2334 4H20L17.199 16.3833Z"></path>
               </svg>
-              <span className="flex flex-col">
-                <span className="leading-[1.15]"><em>Design is</em> </span>
-                <span className="flex items-center gap-2 leading-[1.15] lg:gap-4">
-                  <span className="mt-1 h-0.5 w-8 rounded-full bg-slate-400 lg:h-1 lg:w-24 dark:bg-slate-600"></span>
-                  <span><strong className="font-extrabold text-slate-600 dark:text-slate-300">inside</strong> and <strong className="font-extrabold text-slate-600 dark:text-slate-300">out </strong></span>
-                  <span className="mt-1 h-0.5 w-6 rounded-full bg-slate-400 lg:h-1 lg:w-14 dark:bg-slate-600"></span></span>
-                <span className="leading-[1.15]">is a <strong className="relative font-extrabold text-slate-600 dark:text-slate-300">
-                  <span className="absolute -left-0.5 bottom-0 right-0 top-1 z-[-1] rounded-md bg-slate-100 px-1 lg:-left-1.5 lg:-right-0.5 lg:bottom-0 lg:top-2 dark:bg-slate-800"></span>must.</strong></span></span>
+              <span className="flex flex-col" style={{ color: '#475569' }}>
+                <span className="text-5xl font-bold leading-14">Design is</span>
+                <span className="text-5xl font-bold leading-14">intelligence</span>
+                <div className="flex">
+                  <div>
+                    <div className="text-5xl font-bold text-slate-300 leading-14">made</div>
+                    <div className="text-5xl font-bold leading-14">visible.</div>
+                  </div>
+                  <DesignIdea className="ml-4 w-24 h-24" />
+                </div>
+              </span>
             </blockquote>
+
+            {/* Right line */}
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 w-1/4 h-1 bg-orange-500"></div>
           </div>
         </div>
       </div>
 
+
       <div>
-        <div className='mt-40 col-span-12 relative'>
+        <div className="mt-40 col-span-12 flex items-center">
           <Typography>My Stack</Typography>
-          {/* <div className="absolute bottom-2 left-0 w-full h-1 bg-orange-500"></div> */}
+          <div className="flex-grow h-1 bg-orange-500 ml-4 relative">
+            <div className="absolute h-1 bg-gray-500 w-3/4"></div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 mt-16">
@@ -186,35 +226,75 @@ export default function Home({ posts }) {
         </div>
       </div>
 
-      <div className='mt-40 flex space-x-4 overflow-x-auto'>
-        <Image
-          alt={'title'}
-          src={`${process.env.BASE_PATH || ''}/static/images/dashflow.png`}
-          className="object-cover object-center md:h-36 lg:h-48 min-h-fit"
-          width={544}
-          height={306}
-        />
-        <Image
-          alt={'title'}
-          src={`${process.env.BASE_PATH || ''}/static/images/dwanify.png`}
-          className="object-cover object-center md:h-36 lg:h-48 min-h-fit"
-          width={544}
-          height={306}
-        />
-        <Image
-          alt={'title'}
-          src={`${process.env.BASE_PATH || ''}/static/images/savory.png`}
-          className="object-cover object-center md:h-36 lg:h-48 min-h-fit"
-          width={544}
-          height={306}
-        />
-        <Image
-          alt={'title'}
-          src={`${process.env.BASE_PATH || ''}/static/images/hyflyer.png`}
-          className="object-cover object-center md:h-36 lg:h-48 min-h-fit"
-          width={544}
-          height={306}
-        />
+      {/* <div className="relative overflow-hidden w-full h-48 mt-20"> */}
+      {/* Carousel container */}
+      {/* <div className="flex animate-scroll gap-4">
+          {[...projectImages, ...projectImages].map((image, index) => (
+            <div key={index} className='border border-orange-500 p-4 flex rounded-lg w-full'>
+              <Image
+                alt={`${image.title}`}
+                src={`${process.env.BASE_PATH || ''}/static/images/${image.url}`}
+                className="object-cover object-center md:h-36 lg:h-48 min-h-fit rounded-md"
+                width={544}
+                height={306}
+              />
+            </div>
+          ))}
+        </div>
+      </div> */}
+
+
+      <div className="relative overflow-hidden w-full h-auto my-20">
+        {/* Carousel container */}
+        <div className="flex animate-scroll gap-4">
+          {[...projectImages, ...projectImages].map((image, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center p-5 border border-orange-500 rounded-lg"
+              style={{ background: 'linear-gradient(to right, #E7F5FD, #FCEBE0)' }}
+            >
+              <Image
+                alt={`${image.title}`}
+                src={`${process.env.BASE_PATH || ''}/static/images/${image.url}`}
+                className="object-cover object-center rounded-md"
+                width={480} // Adjust this as per your actual image size
+                height={640} // Adjust this as per your actual image size
+              />
+            </div>
+          ))}
+        </div>
+
+      </div >
+
+
+
+
+
+      <div className="relative overflow-hidden w-full mt-20">
+        {/* Carousel container */}
+        <div className="flex animate-scroll gap-4">
+          {[...projectImages, ...projectImages].map((image, index) => (
+            // <div
+            //   key={index}
+            //   className="flex items-center justify-center p-5 border border-orange-500 rounded-lg h-auto"
+            //   style={{ width: '640px' }}
+            // >
+            //   <Image
+            //     alt={`${image.title}`}
+            //     src={`${process.env.BASE_PATH || ''}/static/images/${image.url}`}
+            //     width={1816} // Match the actual width of your images
+            //     height={1236} // Match the actual height of your images
+            //     style={{
+            //       width: "auto", // Ensure the image scales correctly
+            //       height: "100%", // Make it as tall as the container padding: '10px', 1816 × 1236 
+            //     }}
+            //   />
+            // </div>
+
+
+            <div className='w-xl '>alkdjflakjdflkajdslfkjaldsfjlaksdjf `${image.url}`</div>
+          ))}
+        </div>
       </div>
     </>
   )
