@@ -56,6 +56,7 @@ export default function Page() {
 					projects.map((project, idx) => {
 						return (
 							<div
+								key={idx}
 								className="relative mt-20 flex flex-col overflow-visible rounded-lg border p-4 shadow-md md:flex-row lg:flex-row xl:flex-row"
 								style={{
 									borderColor: '#F8875E',

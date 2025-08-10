@@ -110,7 +110,7 @@ export default function Home({ posts }) {
 		<>
 			<div className="mt-20 grid gap-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
 				<div className="order-2 md:order-1">
-					<a href="#" className="max-w-sm rounded-lg border border-orange-400 px-4 py-2 shadow-sm">
+					<div className="max-w-sm rounded-lg border border-orange-400 px-4 py-2 shadow-sm">
 						<div className="inline-block">
 							<span className="relative flex size-3">
 								<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
@@ -118,7 +118,7 @@ export default function Home({ posts }) {
 							</span>
 						</div>
 						<span className="pl-4">Available for Work</span>
-					</a>
+					</div>
 
 					<div className="mt-16">
 						<Typography>
@@ -246,23 +246,6 @@ export default function Home({ posts }) {
 				</div>
 			</div>
 
-			{/* <div className="relative overflow-hidden w-full h-48 mt-20"> */}
-			{/* Carousel container */}
-			{/* <div className="flex animate-scroll gap-4">
-          {[...projectImages, ...projectImages].map((image, index) => (
-            <div key={index} className='border border-orange-500 p-4 flex rounded-lg w-full'>
-              <Image
-                alt={`${image.title}`}
-                src={`${process.env.BASE_PATH || ''}/static/images/${image.url}`}
-                className="object-cover object-center md:h-36 lg:h-48 min-h-fit rounded-md"
-                width={544}
-                height={306}
-              />
-            </div>
-          ))}
-        </div>
-      </div> */}
-
 			<div className="relative my-20 h-auto w-full overflow-hidden">
 				{/* Carousel container */}
 				<div className="animate-scroll flex gap-4">
@@ -280,32 +263,6 @@ export default function Home({ posts }) {
 								height={640} // Adjust this as per your actual image size
 							/>
 						</div>
-					))}
-				</div>
-			</div>
-
-			<div className="relative mt-20 w-full overflow-hidden">
-				{/* Carousel container */}
-				<div className="animate-scroll flex gap-4">
-					{[...projectImages, ...projectImages].map((image, index) => (
-						// <div
-						//   key={index}
-						//   className="flex items-center justify-center p-5 border border-orange-500 rounded-lg h-auto"
-						//   style={{ width: '640px' }}
-						// >
-						//   <Image
-						//     alt={`${image.title}`}
-						//     src={`${process.env.BASE_PATH || ''}/static/images/${image.url}`}
-						//     width={1816} // Match the actual width of your images
-						//     height={1236} // Match the actual height of your images
-						//     style={{
-						//       width: "auto", // Ensure the image scales correctly
-						//       height: "100%", // Make it as tall as the container padding: '10px', 1816 × 1236
-						//     }}
-						//   />
-						// </div>
-
-						<div className="w-xl">alkdjflakjdflkajdslfkjaldsfjlaksdjf `${image.url}`</div>
 					))}
 				</div>
 			</div>
